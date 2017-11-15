@@ -27,9 +27,9 @@
 - (instancetype)initWithFrame:(CGRect)frame;
 - (instancetype)initWithFrame:(CGRect)frame imageName:(NSString *)imageName;
 
-
 /**
  * 加载图片
+ * @param imageName 全景图图片名
  */
 - (void)setImageWithName:(NSString *)imageName;
 

@@ -17,7 +17,6 @@
 @property (nonatomic, assign) GLuint vertexBufferID;           /// 顶点缓存指针
 @property (nonatomic, assign) GLuint vertexTexCoordID;         /// 纹理缓存指针
 @property (nonatomic, strong) GLKBaseEffect *effect;           /// 着色器
-@property (nonatomic, strong) GLKTextureInfo *textureInfo;     /// 着色器
 
 #pragma -mark 手势相关属性
 @property (nonatomic, strong) UIPanGestureRecognizer *pan;     /// 滑动手势
