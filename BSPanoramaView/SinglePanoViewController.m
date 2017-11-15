@@ -17,10 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     CGRect panoRect = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height- 64);
-    BSPanoramaView *panoView = [[BSPanoramaView alloc] initWithFrame:panoRect];
-    [panoView setImageWithName:@"test"];
+    BSPanoramaView *panoView = [[BSPanoramaView alloc] initWithFrame:panoRect imageName:@"test"];
     [self.view addSubview:panoView];
 }
 

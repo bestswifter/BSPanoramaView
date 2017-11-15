@@ -33,6 +33,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.enableSetNeedsDisplay = NO;
+        [[PanoramaManager sharedInstance] registerView:self];
         [self setupOpenGL];          /// OpenGL 初始化设置
         [self addGestureRecognizer]; /// 添加手势
     }
@@ -59,7 +60,8 @@
     GLKTextureLoader *loader = [[GLKTextureLoader alloc] initWithSharegroup:self.context.sharegroup];
     [loader textureWithCGImage:textureImage.CGImage options:options queue:dispatch_get_main_queue() completionHandler:^(GLKTextureInfo * _Nullable textureInfo, NSError * _Nullable outError) {
         
-        if (self.shouldUnload) {
+        if (self.shouldUnload) {  // 因为是异步加载，所以需要考虑调用完 unloadImage 才加载成功的情况
+            [[PanoramaManager sharedInstance] unRegisterView:self];
             GLuint name = textureInfo.name;
             glDeleteTextures(1, &name);
             glDrawElements(GL_TRIANGLES, self.numIndices, GL_UNSIGNED_SHORT, 0);
@@ -70,8 +72,6 @@
         self.effect = [[GLKBaseEffect alloc] init];
         self.effect.texture2d0.enabled = GL_TRUE;
         self.effect.texture2d0.name = textureInfo.name;
-        
-        [[PanoramaManager sharedInstance] registerView:self];
     }];
 }
 
@@ -178,7 +178,7 @@ int esGenSphere(int numSlices, float radius, float **vertices,
     return numIndices;
 }
 
-#pragma mark -----添加手势-----
+#pragma mark 手势添加与识别
 - (void)addGestureRecognizer{
     /// 平移手势
     self.pan =[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panAction:)];
@@ -203,17 +203,16 @@ int esGenSphere(int numSlices, float radius, float **vertices,
     pinch.scale = 1.0;
 }
 
-#pragma mark ---GLKViewDelegate, 绘制----
+#pragma mark 绘制
 - (void)drawRect:(CGRect)rect {
     [self update];
     [self.effect prepareToDraw];
     
-    glClearColor(0.3f, 0.6f, 1.0f, 1.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     glDrawElements(GL_TRIANGLES, self.numIndices, GL_UNSIGNED_SHORT, 0);
 }
 
-#pragma mark ---变换坐标系投影-------
 - (void)update{
     CGSize size = self.bounds.size;
     float aspect = fabs(size.width / size.height);
@@ -297,7 +296,9 @@ int esGenSphere(int numSlices, float radius, float **vertices,
 }
 
 - (void)unRegisterView:(BSPanoramaView *)view {
-    [self.panoViews removeObject:view];
+    if ([self.panoViews containsObject:view]) {
+        [self.panoViews removeObject:view];
+    }
 }
 
 - (void)display:(CADisplayLink *)displayLink {

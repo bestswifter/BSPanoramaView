@@ -24,17 +24,32 @@
 
 @interface BSPanoramaView : GLKView
 
+/**
+ 新建全景图对象
+
+ @param frame 图片大小
+ @return 图片资源名称
+ */
 - (instancetype)initWithFrame:(CGRect)frame;
+
+/**
+ 新建全景图对象
+
+ @param frame 图片大小
+ @param imageName 图片资源名称
+ @return 全景图对象
+ */
 - (instancetype)initWithFrame:(CGRect)frame imageName:(NSString *)imageName;
 
 /**
- * 加载图片
- * @param imageName 全景图图片名
+ 加载全景图片
+
+ @param imageName 全景图图片名称
  */
 - (void)setImageWithName:(NSString *)imageName;
 
 /**
- *  当不再使用时应该释放内存，并且把自己从全局的 PanoramaManager 中移除
+ 当不再使用时应该释放内存，并且把自己从全局的 PanoramaManager 中移除
  */
 - (void)unloadImage;
 
