@@ -2,7 +2,7 @@
 
 BSPanoramaView 是 iOS 平台上一个轻量的全景图组件，**它不依赖任何第三方框架，仅有 300 多行代码，最终的包大小只会增加 30Kb 左右。**
 
-![](http://images.bestswifter.com/BSPanorama.gif)
+![](./BSPanorama.gif)
 
 由于录制屏幕的原因，横屏效果无法展示，在真机上会有更好的用户体验。
 
