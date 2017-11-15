@@ -2,7 +2,7 @@
 
 中文文档请阅读[这里](./Chinese.md)
 
-![](http://images.bestswifter.com/BSPanorama.gif)
+![](./BSPanorama.gif)
 
 Due to the limitation of recording screen, the actual experience on real device is much better the gif shown above.
 
