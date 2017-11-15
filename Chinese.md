@@ -2,6 +2,10 @@
 
 BSPanoramaView 是 iOS 平台上一个轻量的全景图组件，**它不依赖任何第三方框架，仅有 300 多行代码，最终的包大小只会增加 30Kb 左右。**
 
+![](http://images.bestswifter.com/BSPanorama.gif)
+
+由于录制屏幕的原因，横屏效果无法展示，在真机上会有更好的用户体验。
+
 BSPanoramaView 从 [WushuputiGH/Panorama](https://github.com/WushuputiGH/Panorama) 这个 Repo 中借鉴了很多 OpenGL 相关的运算，主要涉及模型生成以及矩阵变换。
 
 BSPanoramaView 重构了整个应用层并且修复了几个重大的 bug，因此基本上可以投入生产环境使用。可能是因为没有正式测试的原因，目前没有发现明显的问题。如果你的项目对性能和稳定性的要求不是变态级别的，可以考虑使用 BSPanoramaView 或者在此基础上略作修改。
