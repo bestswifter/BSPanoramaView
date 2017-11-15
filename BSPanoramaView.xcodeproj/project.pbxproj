@@ -14,6 +14,8 @@
 		9B9E00C41FBC29B600DB85C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E00C21FBC29B600DB85C6 /* LaunchScreen.storyboard */; };
 		9B9E00C71FBC29B600DB85C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00C61FBC29B600DB85C6 /* main.m */; };
 		9B9E00CF1FBC29E300DB85C6 /* BSPanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00CE1FBC29E300DB85C6 /* BSPanoramaView.m */; };
+		9B9E00D21FBC32C300DB85C6 /* SinglePanoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00D11FBC32C300DB85C6 /* SinglePanoViewController.m */; };
+		9B9E00D51FBC36F900DB85C6 /* TablePanoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00D41FBC36F900DB85C6 /* TablePanoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		9B9E00C61FBC29B600DB85C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B9E00CD1FBC29E300DB85C6 /* BSPanoramaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSPanoramaView.h; sourceTree = "<group>"; };
 		9B9E00CE1FBC29E300DB85C6 /* BSPanoramaView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSPanoramaView.m; sourceTree = "<group>"; };
+		9B9E00D01FBC32C300DB85C6 /* SinglePanoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinglePanoViewController.h; sourceTree = "<group>"; };
+		9B9E00D11FBC32C300DB85C6 /* SinglePanoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinglePanoViewController.m; sourceTree = "<group>"; };
+		9B9E00D31FBC36F900DB85C6 /* TablePanoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TablePanoViewController.h; sourceTree = "<group>"; };
+		9B9E00D41FBC36F900DB85C6 /* TablePanoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TablePanoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 				9B9E00B81FBC29B600DB85C6 /* AppDelegate.m */,
 				9B9E00BA1FBC29B600DB85C6 /* ViewController.h */,
 				9B9E00BB1FBC29B600DB85C6 /* ViewController.m */,
+				9B9E00D01FBC32C300DB85C6 /* SinglePanoViewController.h */,
+				9B9E00D11FBC32C300DB85C6 /* SinglePanoViewController.m */,
+				9B9E00D31FBC36F900DB85C6 /* TablePanoViewController.h */,
+				9B9E00D41FBC36F900DB85C6 /* TablePanoViewController.m */,
 				9B9E00CD1FBC29E300DB85C6 /* BSPanoramaView.h */,
 				9B9E00CE1FBC29E300DB85C6 /* BSPanoramaView.m */,
 				9B9E00BD1FBC29B600DB85C6 /* Main.storyboard */,
@@ -147,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9E00D21FBC32C300DB85C6 /* SinglePanoViewController.m in Sources */,
 				9B9E00BC1FBC29B600DB85C6 /* ViewController.m in Sources */,
 				9B9E00C71FBC29B600DB85C6 /* main.m in Sources */,
+				9B9E00D51FBC36F900DB85C6 /* TablePanoViewController.m in Sources */,
 				9B9E00CF1FBC29E300DB85C6 /* BSPanoramaView.m in Sources */,
 				9B9E00B91FBC29B600DB85C6 /* AppDelegate.m in Sources */,
 			);
