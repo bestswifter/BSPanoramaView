@@ -6,7 +6,7 @@ BSPanoramaView is a lightweight panorama picture browser on iOS platform, which 
 
 BSPanoramaView does not rely on any other third party framework and it only contains about three hundred lines of code.
 
-BSPanoramaView is inspired by [WushuputiGH/Panorama](https://github.com/WushuputiGH/Panorama) and copied some calculations about OpenGL but rewrite the application architecture and fixed many bugs. 
+BSPanoramaView was inspired by [WushuputiGH/Panorama](https://github.com/WushuputiGH/Panorama) and copied some calculations about OpenGL but rewrote the application architecture and fixed many bugs. 
 
 At current time, BSPanoramaView can be applied in production environment if you are tolerant of some tiny defects.
 
