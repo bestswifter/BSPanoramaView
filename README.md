@@ -2,6 +2,10 @@
 
 中文文档请阅读[这里](./Chinese.md)
 
+![](http://images.bestswifter.com/BSPanorama.gif)
+
+Due to the limitation of recording screen, the actual experience on real device is much better the gif shown above.
+
 BSPanoramaView is a lightweight panorama picture browser on iOS platform, which will only make the binary file 30k larger.
 
 BSPanoramaView does not rely on any other third party framework and it only contains about three hundred lines of code.
