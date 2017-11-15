@@ -16,6 +16,7 @@
 		9B9E00CF1FBC29E300DB85C6 /* BSPanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00CE1FBC29E300DB85C6 /* BSPanoramaView.m */; };
 		9B9E00D21FBC32C300DB85C6 /* SinglePanoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00D11FBC32C300DB85C6 /* SinglePanoViewController.m */; };
 		9B9E00D51FBC36F900DB85C6 /* TablePanoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00D41FBC36F900DB85C6 /* TablePanoViewController.m */; };
+		9B9E00D81FBC380600DB85C6 /* PanoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E00D61FBC380500DB85C6 /* PanoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		9B9E00D11FBC32C300DB85C6 /* SinglePanoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinglePanoViewController.m; sourceTree = "<group>"; };
 		9B9E00D31FBC36F900DB85C6 /* TablePanoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TablePanoViewController.h; sourceTree = "<group>"; };
 		9B9E00D41FBC36F900DB85C6 /* TablePanoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TablePanoViewController.m; sourceTree = "<group>"; };
+		9B9E00D61FBC380500DB85C6 /* PanoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoTableViewCell.m; sourceTree = "<group>"; };
+		9B9E00D71FBC380500DB85C6 /* PanoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				9B9E00D11FBC32C300DB85C6 /* SinglePanoViewController.m */,
 				9B9E00D31FBC36F900DB85C6 /* TablePanoViewController.h */,
 				9B9E00D41FBC36F900DB85C6 /* TablePanoViewController.m */,
+				9B9E00D71FBC380500DB85C6 /* PanoTableViewCell.h */,
+				9B9E00D61FBC380500DB85C6 /* PanoTableViewCell.m */,
 				9B9E00CD1FBC29E300DB85C6 /* BSPanoramaView.h */,
 				9B9E00CE1FBC29E300DB85C6 /* BSPanoramaView.m */,
 				9B9E00BD1FBC29B600DB85C6 /* Main.storyboard */,
@@ -159,6 +164,7 @@
 			files = (
 				9B9E00D21FBC32C300DB85C6 /* SinglePanoViewController.m in Sources */,
 				9B9E00BC1FBC29B600DB85C6 /* ViewController.m in Sources */,
+				9B9E00D81FBC380600DB85C6 /* PanoTableViewCell.m in Sources */,
 				9B9E00C71FBC29B600DB85C6 /* main.m in Sources */,
 				9B9E00D51FBC36F900DB85C6 /* TablePanoViewController.m in Sources */,
 				9B9E00CF1FBC29E300DB85C6 /* BSPanoramaView.m in Sources */,
