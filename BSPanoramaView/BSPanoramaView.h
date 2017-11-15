@@ -14,7 +14,7 @@
 
 @interface PanoramaManager: NSObject
 
-@property (nonatomic, assign) GLKQuaternion lastQuaternion;    /// 存储上一次的四元数
+@property (nonatomic, assign) GLKQuaternion lastQuaternion;    ///< 存储最近一次有效的四元数
 
 + (PanoramaManager *)sharedInstance;
 - (void)registerView:(BSPanoramaView *)view;

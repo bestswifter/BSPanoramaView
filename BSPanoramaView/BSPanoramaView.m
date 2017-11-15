@@ -312,6 +312,10 @@ int esGenSphere(int numSlices, float radius, float **vertices,
         self.lastQuaternion = GLKQuaternionMake(-wx, wy, wz, w);
     }
     
+#if TARGET_OS_SIMULATOR
+    self.lastQuaternion = GLKQuaternionMake(0, 0, 1, 1);  // 为模拟器提供假的传感器数据
+#endif
+    
     for (BSPanoramaView *view in self.panoViews) {
         if (view) {
             [view display];
