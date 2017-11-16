@@ -36,7 +36,7 @@
  新建全景图对象
 
  @param frame 图片大小
- @param imageName 图片资源名称
+ @param imageName 图片资源名称，如果图片分辨率高于 4096 * 2048，为了避免过高的内存占用会拒绝加载
  @return 全景图对象
  */
 - (instancetype)initWithFrame:(CGRect)frame imageName:(NSString *)imageName;

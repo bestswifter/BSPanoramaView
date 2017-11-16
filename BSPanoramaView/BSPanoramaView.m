@@ -33,7 +33,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.enableSetNeedsDisplay = NO;
-        [[PanoramaManager sharedInstance] registerView:self];
         [self setupOpenGL];          /// OpenGL 初始化设置
         [self addGestureRecognizer]; /// 添加手势
     }
@@ -57,9 +56,12 @@
     /// 将图片转换成为纹理信息，由于OpenGL的默认坐标系设置在左下角, 而GLKit在左上角, 因此需要转换
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], GLKTextureLoaderOriginBottomLeft, nil];
     UIImage *textureImage = [UIImage imageNamed:imageName];
+    if (textureImage.size.height * textureImage.size.width > 4096.1f * 2048.1f) {
+        return ;
+    }
     GLKTextureLoader *loader = [[GLKTextureLoader alloc] initWithSharegroup:self.context.sharegroup];
     [loader textureWithCGImage:textureImage.CGImage options:options queue:dispatch_get_main_queue() completionHandler:^(GLKTextureInfo * _Nullable textureInfo, NSError * _Nullable outError) {
-        
+        [[PanoramaManager sharedInstance] registerView:self];
         if (self.shouldUnload) {  // 因为是异步加载，所以需要考虑调用完 unloadImage 才加载成功的情况
             [[PanoramaManager sharedInstance] unRegisterView:self];
             GLuint name = textureInfo.name;
