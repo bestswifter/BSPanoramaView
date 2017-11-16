@@ -11,7 +11,7 @@
 @interface BSPanoramaView ()
 
 #pragma -mark OpenGL 相关属性
-@property (nonatomic, assign) BOOL shouldUnload;               /// 索引数
+@property (nonatomic, assign) BOOL shouldUnload;               /// 是否需要释放纹理的标记位
 @property (nonatomic, assign) int numIndices;                  /// 索引数
 @property (nonatomic, assign) GLuint vertexIndicesBufferID;    /// 顶点索引缓存指针
 @property (nonatomic, assign) GLuint vertexBufferID;           /// 顶点缓存指针
